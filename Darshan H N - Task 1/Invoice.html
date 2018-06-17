@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Invoice</title>
+    <h1><u>Abc Provisional Store</u></h1>
+    <p>4th Block, Jaya Nagar, Bengaluru</p>
+
+    <h2>Invoice:</h2>
+	<style>
+    #myTable{
+        counter-reset: serial-number;
+    }
+    #myTable tbody td:first-child:before{
+        counter-increment: serial-number;
+        content: counter(serial-number);
+    }
+    h1{
+        margin-left: 16%;
+    }
+    p{
+        margin-left: 18%;
+    }
+    body{
+    counter-reset: Serial;
+    }       
+    table{
+        width: 50%;
+        margin-bottom: 20px;
+		border-collapse: separate;
+        }
+    table, th, td{
+        border: 1px solid #cdcdcd;
+        }
+    table th, table td{
+        padding: 10px;
+        text-align: center;
+    }
+    </style>
+
+
+</head>
+<body>
+	<div class="div1">
+       
+	   <button onclick="myFunction()">Add Row</button>
+       <button onclick="findTotal()">Generate Total</button><br><br>
+		<table id="myTable" >
+        <thead>
+            <tr>
+                <td>Sl.No.</td>
+                <td>Item Name</td>
+                <td>Price</td>
+                <td>Quantity</td>
+                <td>Amount</td>
+            </tr>
+        </thead>
+        <tbody><tr>
+    <td></td>
+    <td><select id="choose" onchange="calculate()">
+	<option value="select">[Select Items]</option>
+	<option value="soap">Soap</option>
+	<option value="brush">Brush</option>
+	<option value="paste">Tooth-Paste</option>
+    <option value="shampoo">Shampoo</option>
+    <option value="faceWash">Face-Wash</option>
+</select></td>
+<td><input type="text" id="price" name="price"></td>
+<td><input type="text" id="quantity" oninput="tprice()" name="quantity" placeholder="enter quantity"></td>
+<td><input type="text"  id="result" name="total" ></td>
+</tr>
+</tbody>
+</table>
+<b>Total Amount : </b> Rs. <input type="text" id="totalValue" value="">
+</form>
+</div>
+<script src="result.js" >
+</script>
+</body>
+</html>
