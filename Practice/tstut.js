@@ -1,0 +1,11 @@
+var myName = "Darshan";
+var myAge = 27;
+var canVote = true;
+var degree = "B.Tech";
+degree = 2013;
+console.log("My Name is " + myName + " " + myAge + " yrs old" + " completed " + degree + " in the year " + degree);
+var strToInt = parseInt("5");
+var numToStr = 5;
+console.log("numToStr = " + typeof (numToStr.toString()));
+console.log("strToInt = " + typeof (strToInt));
+var PI = 3.142;
